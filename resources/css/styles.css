@@ -1,11 +1,10 @@
 
 /* ============================================= */
 /*              Base styles                      */
-/* ============================================= */
 
 * {
   font-family: 'Lato', sans-serif;
-  color: #777;
+  color: $primary-color;
   box-sizing: border-box;
 }
 
@@ -17,23 +16,22 @@ a {
   text-decoration: none;
 }
 
-
 /* ============================================= */
 /*              Typography                       */
 /* ============================================= */
 
 .headline-primary {
-  color: #58e1c1;
-  margin-left: 10px;
+  color: $secondary-color;
+  margin-left: $sm;
 }
 
 .headline-secondary {
   font-weight: 300;
-  color: #777;
+  color: $primary-color;
 }
 
 .link {
-  color: #51ddfc;
+  color: $third-color;
   font-weight: 700;
 }
 
@@ -43,8 +41,8 @@ a {
   font-style: italic;
   margin-left: 20px;
   padding-left: 20px;
-  border-left: 8px solid #58e1c1;
-  border-radius: 5px;
+  border-left: 8px solid $secondary-color;
+  border-radius: $xs;
 }
 
 
@@ -53,29 +51,29 @@ a {
 /* ============================================= */
 
 .container {
-  padding: 0 10px;
+  padding: 0 $sm;
 }
 
 .row {
   display: flex;
   flex-direction: column;
-  padding: 1em 10px;
+  padding: 1em $sm;
 }
 
 [class^=col] {
-  margin-top: 10px;
-  flex-basis: 100%;
+  margin-top: $sm;
+  flex-basis: $flex-size;
   min-height: 25px;
-  padding: 10px;
-  border-radius: 5px;
+  padding: $sm;
+  border-radius: $xs;
 }
 
 .theme.col-1 {
-  background-color: #927bc1;
+  background-color: $theme-info;
 }
 
 .theme.col-2 {
-  background-color: #fd7856;
+  background-color: $theme-warning;
 }
 
 .theme.col-3 {
@@ -107,11 +105,11 @@ a {
 }
 
 .theme.col-10 {
-  background-color: #63cc82;
+  background-color: $theme-success;
 }
 
 .theme.col-11 {
-  background-color: #51ddfc;
+  background-color: $third-color;
 }
 
 .theme.col-12 {
@@ -119,7 +117,7 @@ a {
 }
 
 .card {
-  flex-basis: 100%;
+  flex-basis: $flex-size;
 }
 
 
@@ -129,25 +127,25 @@ a {
 
 .nav {
   padding-left: 0;
-  flex-basis: 100%;
+  flex-basis: $flex-size;
   display: flex;
   flex-direction: column;
 }
 
 .nav-link {
   text-align: center;
-  border-radius: 5px;
-  padding: 10px 0;
+  border-radius: $xs;
+  padding: $sm 0;
   display: block;
-  width: 100%;
-  transition: 
-    background-color .2s ease-in-out, 
+  width: $flex-size;
+  transition:
+    background-color .2s ease-in-out,
     color .2s ease-in-out;
-}
 
-.nav-link:hover {
-  color: #fff;
-  background-color: #58e1c1;
+  &:hover {
+    color: #fff;
+    background-color: $secondary-color;
+  }
 }
 
 
@@ -157,32 +155,32 @@ a {
 
 .btn {
   margin-top: 15px;
-  width: 100%;
+  width: $flex-size;
   color: #fff;
   border: none;
-  padding: 10px 0;
+  padding: $sm 0;
   text-transform: uppercase;
-  border-radius: 5px;
+  border-radius: $xs;
 }
 
 .default {
-  background-color: #51ddfc;
+  background-color: $third-color;
 }
 
 .error {
-  background-color: #e4757a;
+  background-color: $theme-error;
 }
 
 .info {
-  background-color: #927bc1;
+  background-color: $theme-info;
 }
 
 .success {
-  background-color: #63cc82;
+  background-color: $theme-success;
 }
 
 .warning {
-  background-color: #fd7856;
+  background-color: $theme-warning;
 }
 
 
@@ -191,16 +189,16 @@ a {
 /* ============================================= */
 
 .form {
-  flex-basis: 100%;
+  flex-basis: $flex-size;
 }
 
 .input{
   display: block;
   width: 94%;
-  margin: 10px auto 0;
+  margin: $sm auto 0;
   border: none;
-  padding: 10px;
-  border-bottom: 5px solid #58e1c1;
+  padding: $sm;
+  border-bottom: $xs solid #58e1c1;
 }
 
 .hidden {
@@ -221,17 +219,17 @@ a {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
-  max-width: 100%; 
-  max-height: 100%;
+  margin-top: $sm;
+  max-width: $flex-size;
+  max-height: $flex-size;
 }
 
 .img-frame {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
-  max-width: 100%;
+  margin-top: $sm;
+  max-width: $flex-size;
   padding: 13px;
   border: 1px solid #ccc;
 }
@@ -273,7 +271,7 @@ a {
 }
 
 [class^=col] + [class^=col] {
-  margin-left: 10px;
+  margin-left: $sm;
 }
 
 .col-1 {
@@ -328,18 +326,18 @@ a {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  &-link {
+    flex-basis: 100px;
+  }
 }
 
-.nav-link {
-  flex-basis: 100px;
-}
+
 
 .btn {
-  padding: 10px 30px;
-}
-
-.btn + .btn {
-  margin-left: 10px;
+  padding: $sm 30px;
+  & + .btn {
+  margin-left: $sm;
+  }
 }
 
 .logo {
