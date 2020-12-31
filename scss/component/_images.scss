@@ -1,0 +1,28 @@
+/* ============================================= */
+/*              Images                           */
+/* ============================================= */
+
+.img-avatar {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: $sm;
+  max-width: $full;
+  max-height: $full;
+}
+
+.img-frame {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: $sm;
+  max-width: $full;
+  padding: 13px;
+  border: $tiny solid #ccc;
+}
+
+.img-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
