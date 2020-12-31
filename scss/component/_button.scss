@@ -14,20 +14,40 @@
 
 .default {
   background-color: $link-theme;
+  transition: 0.5s;
+  &:hover {
+    background-color: lighten($link-theme, 15%);
+  }
 }
 
 .error {
   background-color: $theme-error;
+  transition: 0.5s;
+  &:hover {
+    background-color: lighten($theme-error, 15%);
+  }
 }
 
 .info {
   background-color: $theme-info;
+  transition: 0.5s;
+  &:hover {
+    background-color: lighten($theme-info, 15%);
+  }
 }
 
 .success {
   background-color: $theme-success;
+  transition: 0.5s;
+  &:hover {
+    background-color: lighten($theme-success, 15%);
+  }
 }
 
 .warning {
   background-color: $theme-warning;
+  transition: 0.5s;
+  &:hover {
+    background-color: lighten($theme-warning, 15%);
+  }
 }

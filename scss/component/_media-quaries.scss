@@ -5,15 +5,11 @@
 
 .container {
   max-width: 1400px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  @include display-margin;
 }
 
 .centered {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  @include display-margin;
 }
 
 .row {
@@ -91,11 +87,12 @@
 
 .btn {
   padding: $sm 30px;
+  & + .btn {
+    margin-left: $sm;
+  }
 }
 
-.btn + .btn {
-  margin-left: $sm;
-}
+
 
 .logo {
   margin-left: initial;

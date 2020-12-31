@@ -3,18 +3,14 @@
 /* ============================================= */
 
 .img-avatar {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  @include display-margin;
   margin-top: $sm;
   max-width: $full;
   max-height: $full;
 }
 
 .img-frame {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  @include display-margin;
   margin-top: $sm;
   max-width: $full;
   padding: 13px;
@@ -22,7 +18,5 @@
 }
 
 .img-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  @include display-margin;
 }
